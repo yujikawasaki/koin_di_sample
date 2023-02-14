@@ -10,13 +10,13 @@ class MyApplication: Application() {
     override fun onCreate() {
         super.onCreate()
 
-//        startKoin {
-//            // Log Koin into Android logger
-//            androidLogger()
-//
-//            androidContext(this@MyApplication)
-//            DataModule.setupKoinAndroid(this@MyApplication)
-//        }
-        DataModule.setupKoinAndroid(this@MyApplication)
+        startKoin {
+            // Log Koin into Android logger
+            androidLogger()
+
+            androidContext(this@MyApplication)
+            DataModule.addKoinModules()
+        }
+//        DataModule.setupKoinAndroid(this@MyApplication)
     }
 }

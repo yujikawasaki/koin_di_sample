@@ -4,16 +4,13 @@ import android.content.SharedPreferences
 import com.example.kmmapplication.KMMContext
 import com.example.kmmapplication.Platform
 import com.example.kmmapplication.getPlatform
+import com.example.kmmapplication.getSp
 
 actual class DataStore actual constructor(val context: KMMContext) {
-    val SP_NAME = "kmm_app"
-    val sp : SharedPreferences
+    private val SP_NAME = "kmm_app"
+    private val sp = context.getSp(SP_NAME)
 
-    init {
-        sp = context.getSharedPreferences(SP_NAME, 0)
-    }
-
-    actual fun log(): String {
+    actual fun getData(): String {
         sp.edit().putString("LOG", "log!!!!").apply()
 
         return sp.getString("LOG", "???") ?: "例外"

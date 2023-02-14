@@ -4,5 +4,5 @@ import com.example.kmmapplication.KMMContext
 
 expect class DataStore(context: KMMContext) {
 
-    fun log(): String
+    fun getData(): String
 }

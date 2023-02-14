@@ -16,6 +16,6 @@ class Greeting : KoinComponent {
     fun greet(): String {
 //        val a = _dataSource == null
 //        return "Hello, ${a}!"
-        return "Hello, ${_dataSource.log()}!"
+        return "Hello, ${_dataSource.getData()}!"
     }
 }

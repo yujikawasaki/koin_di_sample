@@ -12,6 +12,6 @@ struct iOSApp: App {
 	init(){
 
 	    //setup Koin
-	    DataModule.Companion().setupKoiniOS(context: NSObject())
+	    DataModule.Companion().doInitKoin(context: NSObject())
 	}
 }

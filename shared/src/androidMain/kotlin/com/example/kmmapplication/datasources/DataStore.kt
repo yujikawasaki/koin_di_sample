@@ -1,9 +1,6 @@
 package com.example.kmmapplication.datasources
 
-import android.content.SharedPreferences
 import com.example.kmmapplication.KMMContext
-import com.example.kmmapplication.Platform
-import com.example.kmmapplication.getPlatform
 import com.example.kmmapplication.getSp
 
 actual class DataStore actual constructor(val context: KMMContext) {
